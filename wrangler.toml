@@ -1,0 +1,4 @@
+name = "my-new-telegram-bot" # သင့် Worker ရဲ့ နာမည်ကို ထည့်ပါ
+main = "worker.js"
+compatibility_date = "2024-01-01"
+# type = "javascript" ကို ဖြုတ်ပါ
