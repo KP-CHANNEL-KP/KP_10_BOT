@@ -90,13 +90,13 @@ async function onMessage(message, env) {
 
     // >>> Auto Replay Logic (FAQ) <<<
     if (text.includes('/start')) {
-        responseText = "မင်္ဂလာပါရှင်! ကျွန်မကတော့ အလိုအလျောက် ပြန်ဖြေပေးတဲ့ Bot ဖြစ်ပါတယ်။ Group ရဲ့ စည်းကမ်းတွေကို ထိန်းသိမ်းပေးခြင်း၊ အမေးအဖြေများကို ပြန်လည်ဖြေကြားပေးခြင်းတို့ လုပ်ဆောင်ပေးပါတယ်။";
-    } else if (text.includes('ဈေးနှုန်း') || text.includes('price')) {
-        responseText = "လက်ရှိ ဝန်ဆောင်မှု ဈေးနှုန်းများမှာ ၁၀၀၀ ကျပ် မှ ၅၀၀၀ ကျပ် အတွင်းရှိပါသည်။ အသေးစိတ်ကို Private Chat တွင် မေးမြန်းနိုင်ပါသည်။";
-    } else if (text.includes('လိပ်စာ') || text.includes('address')) {
-        responseText = "ကျွန်တော်တို့ရဲ့ ရုံးလိပ်စာကတော့ ရန်ကုန်မြို့၊ ကမာရွတ်မြို့နယ်မှာ တည်ရှိပါတယ်။ ဆက်သွယ်ရန်ဖုန်းနံပါတ်: example@email.com";
-    } else if (text.includes('နေကောင်းလား')) {
-        responseText = "ကျေးဇူးတင်ပါတယ်၊ ကျွန်မ ကောင်းပါတယ်။ သင်ရော နေကောင်းလားရှင်။";
+        responseText = "မင်္ဂလာပါ။ကျနော်က မေးတာတွေ အလိုလျှောက်ာပြန်ပေးတဲ့ bot ပါ KP ဆီမှာ ဘယ် Service များလိုချင်လို့လဲ ခမျ";
+    } else if (text.includes('Mytel Cf စျေးနှုန်း') || text.includes('price')) {
+        responseText = "လက်ရှိ မှာတော့ ၁လစာ (၅၀၀၀)၊၁၅ရက်စာ (၃၀၀၀) နဲ့ ရပါတယ်​ဗျ။ အသေးစိတ်ကို Private Chat တွင် မေးမြန်းနိုင်ပါတယ်။";
+    } else if (text.includes('Mytel Gcp စျေးနှုန်း') || text.includes('address')) {
+        responseText = "လက်ရှိ မှာတော့ ၁လစာ (၅၀၀၀) ကိုမှ KP VPN PRO APK နဲ့ပဲ ရပါအုံးမယ်ခမျ";
+    } else if (text.includes('All Sim All Wifi စျေးနှုန်း')) {
+        responseText = "၁လစာ ၁၀၀gb ကိုမှ (၃၀၀၀) ကနေစရပါတယ်။နောက်ပီး ကိုယ်လိုချင်တဲ့ ရက်၊gb ကိုလဲ custom အနေနဲ့ ဝယ်သုံးလို့ရပါတယ်";
     } else {
         // Default message
         responseText = "ကျွန်တော် နားမလည်သေးပါဘူး။ ကျေးဇူးပြုပြီး အောက်က ခလုတ်များကို အသုံးပြုပြီး မေးမြန်းပေးပါ (သို့မဟုတ်) /start ကို ပို့ပါ။";
