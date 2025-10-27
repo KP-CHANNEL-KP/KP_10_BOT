@@ -18,10 +18,10 @@ async function callTelegramApi(method, body, env) {
 
 // 2. အဖွဲ့ဝင်အသစ် ကြိုဆိုရေး (Welcome Message)
 async function onNewChatMember(chatId, newMembers, env) {
-    // Bot ကို Group ထဲ ထည့်သွင်းခြင်းသာ ဖြစ်ပါက Message မပို့စေရန်
-    if (newMembers.some(member => member.is_bot && member.username === 'YOUR_BOT_USERNAME')) {
-        return new Response('OK');
-    }
+    // Bot ကို Group ထဲ ထည့်သွင်းခြင်းသာ ဖြစ်ပါက Message မပို့စေရန် (Optional, သင့် Bot ရဲ့ Username ကို စစ်ဆေးပါ)
+    // if (newMembers.some(member => member.is_bot && member.username === 'YOUR_BOT_USERNAME')) {
+    //     return new Response('OK');
+    // }
     
     const memberNames = newMembers.map(member => member.first_name || 'အဖွဲ့ဝင်အသစ်').join(', ');
     
@@ -37,7 +37,6 @@ async function onNewChatMember(chatId, newMembers, env) {
 }
 
 // 3. Admin Command များကို ကိုင်တွယ်ခြင်း (Kick, Ban)
-// မှတ်ချက်- Bot ကို Group Admin အဖြစ် ခန့်ထားမှသာ အလုပ်လုပ်မည်
 async function onAdminCommand(message, env) {
     const chatId = message.chat.id;
     const text = message.text ? message.text.toLowerCase() : '';
