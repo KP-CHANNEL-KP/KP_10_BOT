@@ -90,7 +90,7 @@ async function onMessage(message, env) {
 
     // >>> Auto Replay Logic (FAQ) <<<
     if (text.includes('/start')) {
-        responseText = "မင်္ဂလာပါ။ကျနော်က မေးတာတွေ အလိုလျှောက်ာပြန်ပေးတဲ့ bot ပါ KP ဆီမှာ ဘယ် Service များလိုချင်လို့လဲ ခမျ";
+        responseText = "မင်္ဂလာပါ။ကျနော်က မေးတာတွေ အလိုလျှောက်စာပြန်ပေးတဲ့ bot ပါ KP ဆီမှာ ဘယ် Service များလိုချင်လို့လဲ ခမျ";
     } else if (text.includes('Mytel Cf စျေးနှုန်း') || text.includes('price')) {
         responseText = "လက်ရှိ မှာတော့ ၁လစာ (၅၀၀၀)၊၁၅ရက်စာ (၃၀၀၀) နဲ့ ရပါတယ်​ဗျ။ အသေးစိတ်ကို Private Chat တွင် မေးမြန်းနိုင်ပါတယ်။";
     } else if (text.includes('Mytel Gcp စျေးနှုန်း') || text.includes('address')) {
