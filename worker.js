@@ -106,8 +106,8 @@ async function onMessage(message, env) {
     // Reply Keyboard ကို သတ်မှတ်ခြင်း
     const replyMarkup = {
         keyboard: [
-            [{ text: '/start' }, { text: 'Mytel Cf စျေးနှုန်း' }],
-            [{ text: 'Mytel Gcp စျေးနှုန်း' }, { text: 'All Sim All Wifi စျေးနှုန်း' }]
+            [{ text: '/start' }, { text: '/Mytel Cf စျေးနှုန်း' }],
+            [{ text: '/Mytel Gcp စျေးနှုန်း' }, { text: '/All Sim All Wifi စျေးနှုန်း' }]
         ],
         resize_keyboard: true, 
         one_time_keyboard: false 
