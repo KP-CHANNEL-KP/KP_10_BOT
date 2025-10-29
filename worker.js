@@ -94,8 +94,8 @@ async function onMessage(message, env) {
     } else if (text.includes('/all sim all wifi စျေးနှုန်း')) {
         responseText = "၁လစာ ၁၀၀gb ကိုမှ (၃၀၀၀) ကနေစရပါတယ်။ နောက်ပီး ကိုယ်လိုချင်တဲ့ ရက်၊ gb ကိုလဲ custom အနေနဲ့ ဝယ်သုံးလို့ရပါတယ်";
     } else {
-        // Default message
-        responseText = "ကျွန်တော် နားမလည်သေးပါဘူး။ ကျေးဇူးပြုပြီး အောက်က ခလုတ်များကို အသုံးပြုပြီး မေးမြန်းပေးပါ (သို့မဟုတ်) /start ကို ပို့ပါ။";
+        // Default message အောက်က responseTex မှာ t တလုံး ဖြတ်ထားတယ်
+        responseTex = "စျေးများ သိလိုပါက start နှိပ်ပါ";
     }
     // >>> Auto Replay Logic ပြီးဆုံးခြင်း <<<
 
