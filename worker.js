@@ -1,6 +1,7 @@
 // 4. ပုံမှန် စာသား မက်ဆေ့ခ်ျများကို ကိုင်တွယ်ခြင်း (Auto-Reply & Command Keyboard)
 async function onMessage(message, env) {
     const chatId = message.chat.id;
+    // Command တွေကို မှန်ကန်စွာ စစ်ဆေးဖို့အတွက် text ကို lowercase ပြောင်းမယ်
     const text = message.text ? message.text.toLowerCase() : '';
     let responseText = '';
 
@@ -11,7 +12,6 @@ async function onMessage(message, env) {
     } else if (text.includes('/mytel cf စျေးနှုန်း') || text.includes('mytel cf price')) {
         responseText = "လက်ရှိ မှာတော့ ၁လစာ (၅၀၀၀)၊ ၁၅ရက်စာ (၃၀၀၀) နဲ့ ရပါတယ်​ဗျ။ အသေးစိတ်ကို Private Chat တွင် မေးမြန်းနိုင်ပါတယ်။";
     } else if (text.includes('/mytel gcp စျေးနှုန်း') || text.includes('mytel gcp address')) {
-        // မှတ်ချက်: Command ကို lowercase ပြောင်းပြီး စစ်ဆေးရန် '/mytel gcp စျေးနှုန်း' သို့ ပြောင်းထားသည်။
         responseText = "လက်ရှိ မှာတော့ ၁လစာ (၅၀၀၀) ကိုမှ KP VPN PRO APK နဲ့ပဲ ရပါအုံးမယ်ခမျ";
     } else if (text.includes('/all sim all wifi စျေးနှုန်း')) {
         responseText = "၁လစာ ၁၀၀gb ကိုမှ (၃၀၀၀) ကနေစရပါတယ်။ နောက်ပီး ကိုယ်လိုချင်တဲ့ ရက်၊ gb ကိုလဲ custom အနေနဲ့ ဝယ်သုံးလို့ရပါတယ်";
@@ -38,4 +38,12 @@ async function onMessage(message, env) {
     }, env);
     
     return new Response('OK');
-}
+} // <--- ဒီနေရာမှာ function ပိတ်ရပါမယ်။
+
+// (ဒီအောက်က Code အဟောင်းကို ဖျက်ပစ်ရမှာပါ။)
+// if (text.includes('/Mytel Cf စျေးနှုန်း') || text.includes('price')) {
+//     responseText = "လက်ရှိ မှာတော့ ၁လစာ (၅၀၀၀)၊၁၅ရက်စာ (၃၀၀၀) နဲ့ ရပါတယ်​ဗျ။ အသေးစိတ်ကို Private Chat တွင် မေးမြန်းနိုင်ပါတယ်။";
+// if (text.includes('/Mytel Gcp စျေးနှုန်း') || text.includes('address')) {
+//     responseText = "လက်ရှိ မှာတော့ ၁လစာ (၅၀၀၀) ကိုမှ KP VPN PRO APK နဲ့ပဲ ရပါအုံးမယ်ခမျ";
+// if (text.includes('/All Sim All Wifi စျေးနှုန်း')) {
+// ...
