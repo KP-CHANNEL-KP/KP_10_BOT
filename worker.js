@@ -83,8 +83,7 @@ async function onMessage(message, env) {
     const text = message.text ? message.text.toLowerCase() : '';
     let responseText = '';
 
-    // >>> Auto Replay Logic (FAQ) - အမှန်ကန်ဆုံး Logic <<<
-    // စာသားတွေကို lowercase နဲ့ စစ်ဆေးတာကို သတိပြုပါ။
+    // >>> Auto Replay Logic (FAQ) <<<
 
     if (text.includes('/start')) {
         responseText = "မင်္ဂလာပါ။ ကျနော်က မေးတာတွေ အလိုလျှောက် စာပြန်ပေးတဲ့ bot ပါ KP ဆီမှာ ဘယ် Service များ လိုချင်လို့လဲ ခမျ";
@@ -100,7 +99,7 @@ async function onMessage(message, env) {
     }
     // >>> Auto Replay Logic ပြီးဆုံးခြင်း <<<
 
-    // Reply Keyboard ကို သတ်မှတ်ခြင်း (Command တွေက Capital Letters တွေ ပါနိုင်တယ်၊ ဒါပေမယ့် စစ်တဲ့အခါ lowercase နဲ့ပဲ စစ်တယ်)
+    // Reply Keyboard ကို သတ်မှတ်ခြင်း
     const replyMarkup = {
         keyboard: [
             [{ text: '/start' }, { text: '/Mytel Cf စျေးနှုန်း' }],
@@ -120,7 +119,7 @@ async function onMessage(message, env) {
 }
 
 
-// 5. Worker ရဲ့ အဓိက fetch Listener (Syntax အရ အရေးကြီးဆုံးနေရာ)
+// 5. Worker ရဲ့ အဓိက fetch Listener
 export default {
     async fetch(request, env) {
         // Webhook Secret Token စစ်ဆေးခြင်း
